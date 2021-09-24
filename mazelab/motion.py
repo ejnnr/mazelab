@@ -5,6 +5,9 @@ VonNeumannMotion = namedtuple('VonNeumannMotion',
                               ['north', 'south', 'west', 'east'], 
                               defaults=[[-1, 0], [1, 0], [0, -1], [0, 1]])
 
+VonNeumannNoOpMotion = namedtuple('VonNeumannNoOpMotion', 
+                              ['stay', 'left', 'up', 'right', 'down'],
+                              defaults=[[0, 0], [-1, 0], [0, 1], [1, 0], [0, -1]])
 
 MooreMotion = namedtuple('MooreMotion', 
                          ['north', 'south', 'west', 'east', 
