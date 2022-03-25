@@ -29,6 +29,8 @@ class BaseMaze(ABC):
     
     def _convert(self, x, name):
         for obj in self.objects:
+            if len(obj.positions) == 0:
+                continue
             pos = np.asarray(obj.positions)
             x[pos[:, 0], pos[:, 1]] = getattr(obj, name, None)
         return x
